@@ -1,0 +1,37 @@
+/*Default size of the font*/
+html {
+  font-size: 22px;
+}
+
+/*Colour of the background and letters*/
+body {
+  background-color: rgb(0, 0, 59);
+  color: whitesmoke;
+}
+
+/*Original colour of link*/
+a {
+  color: aliceblue;
+}
+
+/*Colour of the link after clicked on*/
+a:visited {
+  color: lightgoldenrodyellow;
+}
+
+/*Colour of the link when hover*/
+a:hover,
+active {
+  color: lightpink;
+}
+
+table,
+tr,
+th,
+td,
+caption {
+  border: 1px solid #eee;
+  font-family: "Courier New", Courier, monospace;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}

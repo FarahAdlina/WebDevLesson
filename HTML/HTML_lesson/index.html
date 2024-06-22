@@ -1,0 +1,477 @@
+<!--Something that needs to be have at the very first line of all HTML doc-->
+<!DOCTYPE html>
+
+<!--Declare the language of this document-->
+<html lang="en">
+  <!--In this file you will find plenty of semantic tags.
+  This is to make the code readable by device.
+  It may not change anything in the view but it is useful for blind people-->
+  <head>
+    <!--Error:-->
+    <!--The character encoding was not declared-->
+    <!--Proceeding using windows-1252-->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Farah" />
+    <meta
+      name="description"
+      content="This page contains all the things
+    I am learning on how to create a HTML."
+    />
+
+    <!--Title of the webpage-->
+    <title>My first web page</title>
+
+    <!--Adding logo beside the title-->
+    <!--This is called relative reference that referencing to another file in folder-->
+    <link rel="icon" href="html5.png" type="image/x-icon" />
+
+    <!--Link to the css style file for this webpage.-->
+    <!--This is called relative reference-->
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+
+  <body>
+    <!--header is a semantic tag-->
+    <header>
+      <!--h1 is header with many different size.
+    There can only be one h1 in a webpage-->
+      <h1>My Goals for the Year</h1>
+
+      <!--hr is a hardline for a page break, p means paragraph-->
+      <hr />
+
+      <!--nav is a semantic tag-->
+      <!--A set of navigation list-->
+      <nav aria-label="primary navigation">
+        <ul>
+          <li>
+            <!--This reference goes to a different section-->
+            <a href="#html">Learn HTML</a>
+          </li>
+
+          <li>
+            <a href="#vacation">Planning a Vacation</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <!--main is a semantic tag-->
+    <main>
+      <!--Define each section in a webpage-->
+      <article id="html">
+        <h2>I'm ready to learn HTML</h2>
+        <p>This is my first web page</p>
+
+        <section>
+          <h3>HTML5</h3>
+          <!--alt is for when the image doesn't appear. 
+            Title tells what the image about when hover.
+            Width and height gives the idea of the image size.
+            It can be made responsive in the CSS-->
+          <figure>
+            <img
+              src="img/html_logo_300x300.png"
+              alt="HTML5 logo"
+              title="HTML5 learning material"
+              width="300"
+              height="300"
+            />
+            <figcaption>
+              <br />An Example of HTML Codes
+              <p><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></p>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h3>My Daily schedule</h3>
+
+          <p>
+            Let me tell you how:
+
+            <!--Breakline, extra space/indentation, pop up for abbrievation-->
+            <br />&nbsp;&nbsp;I learn more about web dev.
+
+            <br />&nbsp;&nbsp;I plan out my schedule.
+
+            <!--This link is called absolute reference-->
+            <br />&nbsp;&nbsp;I use resources from
+            <abbr title="Dave Gray Teaches Code">
+              <a href="https://www.youtube.com/watch?v=mJgBOIoGihA">
+                Dave Gray TC</a
+              ></abbr
+            >
+          </p>
+
+          <!--Ordered list with numbered bullet-->
+          <ol>
+            <li>I learn more about web dev.</li>
+
+            <li>I plan out my schedule.</li>
+
+            <li>
+              I use resources from
+              <abbr title="Dave Gray Teaches Code"
+                ><a href="https://www.youtube.com/watch?v=mJgBOIoGihA"
+                  >Dave Gray TC</a
+                ></abbr
+              >
+            </li>
+          </ol>
+          <!--Semantic tag that hides details-->
+          <aside>
+            <details>
+              <!--mark highlight certain part-->
+              <summary>
+                Guess the <mark>number of hours</mark> I code per day
+              </summary>
+              <p>
+                I started at <time datetime="11:00">11am</time> and I code for
+                <time datetime="PT2H">2 hours</time> for each
+                <time datetime="P2D">2 days</time>
+              </p>
+            </details>
+          </aside>
+
+          <br />
+          <table>
+            <!--Help people to decide whether they wanted to navigate the rest of the table-->
+            <caption>
+              My Daily Schedule
+            </caption>
+
+            <!--thead, tbody and tfoot is for semantic-->
+            <thead>
+              <tr>
+                <!--th is table header-->
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Morning</th>
+                <!--td is table data-->
+                <td>
+                  <time datetime="09:00"> am</time> -
+                  <time datetime="11:00">11 am</time>
+                </td>
+                <td>Write Code</td>
+              </tr>
+              <tr>
+                <th scope="row">Break</th>
+                <td>
+                  <time datetime="11:00">11 am</time> -
+                  <time datetime="12:00">12 pm</time>
+                </td>
+                <td>Eat Lunch</td>
+              </tr>
+              <tr>
+                <th scope="row">Afternoon</th>
+                <td>
+                  <time datetime="12:00">12 pm</time> -
+                  <time datetime="17:00">5 pm</time>
+                </td>
+                <td>Study for Other Courses</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Evening</th>
+                <!--rowspan means having n row for that td-->
+                <td rowspan="2">All Other Times</td>
+                <td>Free Time</td>
+              </tr>
+              <tr>
+                <th scope="row">Night</th>
+                <td>Sleep</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <!--colspan means takes n coloumn for that td-->
+                <td colspan="3">And that's what I do every 5 days a week</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </article>
+      <hr />
+
+      <article id="vacation">
+        <h2>I'm also Planning a Vacation</h2>
+        <!--em means emphasise which italize the content-->
+        <p>I've been working hard and <em>really</em> need a getaway</p>
+        <p>
+          I live in <abbr title="Negeri Sembilan">N9</abbr> so I wanted to visit
+          somewhere cold
+        </p>
+
+        <section>
+          <h3>Places I'd like to visit:</h3>
+          <!--Unordered list with bullet points-->
+          <ul>
+            <li>
+              <p>Cameron Highland</p>
+              <address>
+                Lot 214, Jalan Besar,<br />
+                Tanah Rata,<br />
+                39000 Tanah Rata,<br />
+                Pahang
+              </address>
+              <!--lazy loading would the image load when nearing its place-->
+              <figure>
+                <img
+                  src="img/Cameron_Highland.jpg"
+                  alt="Cameron Highland strawberry"
+                  title="I wanted a vacation in Cameron Highland"
+                  width="1000"
+                  height="563"
+                  loading="lazy"
+                />
+                <figcaption>Cameron Highland Getaway</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Places I'd like to avoid:</h3>
+          <!--dl means description list,
+    dt means description terms,
+    dd means description details-->
+          <dl>
+            <dt>**</dt>
+            <dd>I heard this place is hot and packed</dd>
+            <dt>******* ********</dt>
+            <dd>This place is cold but only have theme parks</dd>
+          </dl>
+
+          <!--strong is bold-->
+          <p>Anywhere with high traffic is a <strong>NOPE!</strong></p>
+        </section>
+      </article>
+
+      <hr />
+
+      <!--Here we will see many way to make a form-->
+      <article id="contact">
+        <h2>Contact Me</h2>
+        <p>I do really like to hear from you</p>
+
+        <!--name means name for the input,
+        id is its variable name,
+        placeholder is to show example,
+        required means it is not null,
+        autofocus will make the page go to that section even after refresh-->
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal info</legend>
+            <p>
+              <label for="firstname">First name:</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="Jane"
+                autocomplete="on"
+                required
+                autofocus
+              />
+            </p>
+
+            <p>
+              <label for="lastname">Last name:</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Doe"
+                autocomplete="on"
+                required
+              />
+            </p>
+
+            <label for="age">Age</label>
+            <input type="date" name="age" id="age" />
+
+            <p>
+              <label for="decade">Favourite Decade:</label>
+              <input
+                type="number"
+                name="decade"
+                id="decade"
+                min="1950"
+                max="2020"
+                step="10"
+                value="1950"
+              />
+            </p>
+
+            <p>
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="1234567890"
+                pattern="[0-9]{10}"
+                autocomplete="on"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@gmail.com"
+                autocomplete="on"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="secret"
+                autocomplete="on"
+              />
+            </p>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Your favourite food</legend>
+            <p>
+              <input type="radio" name="food" id="tacos" value="tacos" />
+              <label for="tacos">Tacos</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                name="food"
+                id="friedrice"
+                value="friedrice"
+              />
+              <label for="friedrice">Fried Rice</label>
+            </p>
+
+            <p>
+              <input type="radio" name="food" id="other" value="other" />
+              <label for="other">Other</label>
+            </p>
+
+            <!--One way of doing option input form           
+          <p>
+            <label for="coffee">Favourite Coffee:</label>
+            <select name="coffee" id="coffee" multiple size="5">
+              <optgroup label="Americano">
+                <option value="Hot Americano">Hot Americano</option>
+                <option value="Iced Americano">Iced Americano</option>
+              </optgroup>
+              <optgroup label="Latte">
+                <option value="Hot Latte" selected>Hot Latte</option>
+                <option value="Iced Latte">Iced Latte</option>
+              </optgroup>
+            </select>
+          </p> -->
+
+            <!--Another way for option input form.
+          This one allow typing and filter-->
+            <p>
+              <label for="coffee">Favourite Coffee</label>
+              <input type="text" name="coffee" id="coffee" list="coffee-list" />
+              <datalist id="coffee-list">
+                <option value="Americano"></option>
+                <option value="Latte"></option>
+                <option value="Expresso"></option>
+              </datalist>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pets</legend>
+            <p>
+              <input type="checkbox" name="pets" id="dog" value="dog" />
+              <label for="dog">Dog</label>
+            </p>
+
+            <p>
+              <input type="checkbox" name="pets" id="cat" value="cat" />
+              <label for="cat">Cat</label>
+            </p>
+
+            <p>
+              <input type="checkbox" name="pets" id="hamster" value="hamster" />
+              <label for="hamster">Hamster</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                name="pets"
+                id="otherpet"
+                value="otherpet"
+              />
+              <label for="otherpet">Other</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Send a note</legend>
+            <label for="message">Your message</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="50"
+              rows="10"
+              placeholder="Type your message here"
+            ></textarea>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <!--Use 'post' instead of 'get' for submit.
+            This is due to the url showing our data if we use 'get'-->
+            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              formaction="https://httpbin.org/post"
+              formmethod="post"
+            >
+              Post
+            </button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
+      </article>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>
+        <!--lt means less than, gt means greater than, copy means copyright symbol-->
+        &lt;&lt;&lt; &copy; <a href="about.html">Farah</a> &gt;&gt;&gt;
+      </p>
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+    </footer>
+  </body>
+</html>
